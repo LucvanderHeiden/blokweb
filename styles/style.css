@@ -1,5 +1,108 @@
 /* CSS Document */
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
+:root {
+  --f1red: #e10600;
+}
+
+header {
+  background-color: var(--f1red);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  max-width: 100%;
+  z-index: 1;
+}
+
+nav>ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+nav img {
+  max-width: 20%;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+body {
+  font-family: sans-serif;
+}
+
+section {
+  position: relative;
+  max-width: 100%;
+  top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section.frontNews {
+  position: relative;
+  max-width: 100%;
+  top: 80px;
+  display: grid;
+
+  border: solid;
+  border-left: hidden;
+  border-bottom: hidden;
+  border-width: 10px;
+  border-color: var(--f1red);
+  border-top-right-radius: 16px;
+
+  margin-bottom: 2em;
+  padding-right: 12px;
+}
+
+article {
+  margin: 8px;
+}
+
+article.smallArticle {
+  max-width: 45%;
+}
+
+h1 {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+h3 {
+  color: var(--f1red);
+  font-size: .75em;
+  margin: 2px;
+  margin-bottom: 6px;
+
+}
+
+.imgCenter {
+  max-width: 100%;
+  margin: auto;
+}
+
+p {
+  padding: 4px;
+  margin-top: 4px;
+
+  border: solid;
+  border-left: hidden;
+  border-top: hidden;
+  border-bottom-right-radius: 10px;
+  border-width: 1px;
+}
+
+button {
+  position: absolute;
+  left: 185px;
+  top: 80px;
+}
