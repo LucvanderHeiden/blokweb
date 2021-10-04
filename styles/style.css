@@ -391,54 +391,67 @@ section:nth-of-type(3)>ul:last-of-type li:hover {
 
 
 
+
+
+
 /* CODE VOOR DE VERSCHILLENDE BORDER COLORS VAN DE VERSCHILLENDE TEAMS BIJ DE STANDINGS */
 
+/* Mercedes */
 section:nth-of-type(3)>ul:last-of-type li:first-of-type h2,
 section:nth-of-type(3)>ul:last-of-type li:nth-of-type(3) h2 {
   border-right: solid .35em #00d2be;
 }
 
+/* Red Bull Racing */
 section:nth-of-type(3)>ul:last-of-type li:nth-of-type(2) h2,
 section:nth-of-type(3)>ul:last-of-type li:nth-of-type(5) h2 {
   border-right: solid .35em #0600ef;
 }
 
+/* McLaren */
 section:nth-of-type(3)>ul:last-of-type li:nth-of-type(4) h2,
 section:nth-of-type(3)>ul:last-of-type li:nth-of-type(8) h2 {
   border-right: solid .35em #FF9800;
 }
 
+/* Ferrari */
 section:nth-of-type(3)>ul:last-of-type li:nth-of-type(6) h2,
 section:nth-of-type(3)>ul:last-of-type li:nth-of-type(7) h2 {
   border-right: solid .35em #dc0000;
 }
 
+/* Alpha Tauri */
 section:nth-of-type(3)>ul:last-of-type li:nth-of-type(9) h2,
 section:nth-of-type(3)>ul:last-of-type li:nth-of-type(14) h2 {
   border-right: solid .35em #2b4562;
 }
 
+/* Alpine */
 section:nth-of-type(3)>ul:last-of-type li:nth-of-type(10) h2,
 section:nth-of-type(3)>ul:last-of-type li:nth-of-type(11) h2 {
   border-right: solid .35em #0090ff;
 }
 
+/* Aston Martin */
 section:nth-of-type(3)>ul:last-of-type li:nth-of-type(12) h2,
 section:nth-of-type(3)>ul:last-of-type li:nth-of-type(13) h2 {
   border-right: solid .35em #006f62;
 }
 
+/* Williams */
 section:nth-of-type(3)>ul:last-of-type li:nth-of-type(15) h2,
 section:nth-of-type(3)>ul:last-of-type li:nth-of-type(16) h2 {
   border-right: solid .35em #005aff;
 }
 
+/* Alfa Romeo */
 section:nth-of-type(3)>ul:last-of-type li:nth-of-type(17) h2,
 section:nth-of-type(3)>ul:last-of-type li:nth-of-type(18) h2,
 section:nth-of-type(3)>ul:last-of-type li:nth-of-type(20) h2 {
   border-right: solid .35em #900000;
 }
 
+/* Haas */
 section:nth-of-type(3)>ul:last-of-type li:nth-of-type(19) h2,
 section:nth-of-type(3)>ul:last-of-type li:nth-of-type(21) h2 {
   border-right: solid .35em lightgrey;
@@ -449,6 +462,8 @@ b {
   font-family: Formula1-Bold;
   text-transform: uppercase;
 }
+
+
 
 
 
@@ -468,9 +483,11 @@ footer {
 }
 
 footer>section {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-between; */
 
   margin: 1em;
   padding: 1em;
@@ -490,6 +507,16 @@ footer li {
 footer li:hover {
   border-bottom-color: var(--f1red);
 }
+
+
+
+
+
+
+
+
+
+
 
 /* CODE VOOR DE TWEEDE HTML PAGINA, OVER DE DRIVERS */
 
@@ -521,7 +548,7 @@ body.driversPage>section {
 
 body.driversPage>section>ul {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
 
   margin: 0em;
   padding: 0em;
@@ -537,6 +564,12 @@ body.driversPage>section>ul>li {
   border-top-right-radius: .65em;
 
   transition: .2s;
+  cursor: pointer;
+}
+
+body.driversPage>section>ul>li:nth-of-type(18),
+body.driversPage>section>ul>li:nth-of-type(19) {
+  font-size: .95em;
 }
 
 body.driversPage>section>ul>li>div {
@@ -551,13 +584,6 @@ body.driversPage>section>ul>li>div:first-of-type>p {
   font-family: Formula1-Wide;
 }
 
-body.driversPage>section>ul>li>div:nth-of-type(2)>p {
-  font-size: 1.2em;
-
-  border-left: solid .2em turquoise;
-  padding: 0em;
-  padding-left: 1em;
-}
 
 body.driversPage>section>ul>li>div:nth-of-type(2)>img {
   margin-top: .5em;
@@ -592,18 +618,185 @@ body.driversPage>section>ul>li>div:nth-of-type(3)>img:first-of-type {
 body.driversPage>section>ul>li>div:nth-of-type(3)>img:last-of-type {
   max-width: 14em;
   text-align: center;
-
 }
+
+body.driversPage>section>ul>li>div:nth-of-type(2)>p {
+  font-size: 1.2em;
+
+  border-left: solid .3em #00d2be;
+  padding: 0em;
+  padding-left: .5em;
+}
+
+
+
+
+
+
+
+
+/* CODE VOOR DE VERSCHILLENDE BORDER COLORS VOOR DE BIJBEHORDENDE TEAMS */
+
+/* Red Bull Racing */
+body.driversPage>section>ul>li:nth-of-type(2)>div:nth-of-type(2)>p,
+body.driversPage>section>ul>li:nth-of-type(5)>div:nth-of-type(2)>p {
+  border-color: #0600ef;
+}
+
+/* McLaren */
+body.driversPage>section>ul>li:nth-of-type(4)>div:nth-of-type(2)>p,
+body.driversPage>section>ul>li:nth-of-type(8)>div:nth-of-type(2)>p {
+  border-color: #FF9800;
+}
+
+/* Ferrari */
+body.driversPage>section>ul>li:nth-of-type(6)>div:nth-of-type(2)>p,
+body.driversPage>section>ul>li:nth-of-type(7)>div:nth-of-type(2)>p {
+  border-color: #dc0000;
+}
+
+/* Alpha Tauri */
+body.driversPage>section>ul>li:nth-of-type(9)>div:nth-of-type(2)>p,
+body.driversPage>section>ul>li:nth-of-type(14)>div:nth-of-type(2)>p {
+  border-color: #2b4562;
+}
+
+/* Alpine */
+body.driversPage>section>ul>li:nth-of-type(10)>div:nth-of-type(2)>p,
+body.driversPage>section>ul>li:nth-of-type(11)>div:nth-of-type(2)>p {
+  border-color: #0090ff;
+}
+
+/* Aston Martin */
+body.driversPage>section>ul>li:nth-of-type(12)>div:nth-of-type(2)>p,
+body.driversPage>section>ul>li:nth-of-type(13)>div:nth-of-type(2)>p {
+  border-color: #006f62;
+}
+
+/* Williams */
+body.driversPage>section>ul>li:nth-of-type(15)>div:nth-of-type(2)>p,
+body.driversPage>section>ul>li:nth-of-type(16)>div:nth-of-type(2)>p {
+  border-color: #005aff;
+}
+
+/* Alfa Romeo */
+body.driversPage>section>ul>li:nth-of-type(17)>div:nth-of-type(2)>p,
+body.driversPage>section>ul>li:nth-of-type(18)>div:nth-of-type(2)>p,
+body.driversPage>section>ul>li:nth-of-type(20)>div:nth-of-type(2)>p {
+  border-color: #900000;
+}
+
+/* Haas */
+body.driversPage>section>ul>li:nth-of-type(19)>div:nth-of-type(2)>p,
+body.driversPage>section>ul>li:nth-of-type(21)>div:nth-of-type(2)>p {
+  border-color: lightgrey;
+}
+
+
+
+
+
 
 
 /* CODE VOOR HET VERANDEREN NAAR DE VERSCHILLENDE BORDER COLORS VAN VERSCHILLENDE TEAMS BIJ HET 'DRIVERS' OVERZICHT */
 
-body.driversPage>section>ul>li:first-of-type:hover {
+/* Mercedes */
+body.driversPage>section>ul>li:first-of-type:hover,
+body.driversPage>section>ul>li:nth-of-type(3):hover {
   border-color: #00d2be;
 
   padding-top: 2em;
   margin-top: .25em;
 }
+
+/* Red Bull Racing */
+body.driversPage>section>ul>li:nth-of-type(2):hover,
+body.driversPage>section>ul>li:nth-of-type(5):hover {
+  border-color: #0600ef;
+
+  padding-top: 2em;
+  margin-top: .25em;
+}
+
+/* McLaren */
+body.driversPage>section>ul>li:nth-of-type(4):hover,
+body.driversPage>section>ul>li:nth-of-type(8):hover {
+  border-color: #FF9800;
+
+  padding-top: 2em;
+  margin-top: .25em;
+}
+
+/* Ferrari */
+body.driversPage>section>ul>li:nth-of-type(6):hover,
+body.driversPage>section>ul>li:nth-of-type(7):hover {
+  border-color: #dc0000;
+
+  padding-top: 2em;
+  margin-top: .25em;
+}
+
+/* Alpha Tauri */
+body.driversPage>section>ul>li:nth-of-type(9):hover,
+body.driversPage>section>ul>li:nth-of-type(14):hover {
+  border-color: #2b4562;
+
+  padding-top: 2em;
+  margin-top: .25em;
+}
+
+/* Alpine */
+body.driversPage>section>ul>li:nth-of-type(10):hover,
+body.driversPage>section>ul>li:nth-of-type(11):hover {
+  border-color: #0090ff;
+
+  padding-top: 2em;
+  margin-top: .25em;
+}
+
+/* Aston Martin */
+body.driversPage>section>ul>li:nth-of-type(12):hover,
+body.driversPage>section>ul>li:nth-of-type(13):hover {
+  border-color: #006f62;
+
+  padding-top: 2em;
+  margin-top: .25em;
+}
+
+/* Williams */
+body.driversPage>section>ul>li:nth-of-type(15):hover,
+body.driversPage>section>ul>li:nth-of-type(16):hover {
+  border-color: #005aff;
+
+  padding-top: 2em;
+  margin-top: .25em;
+}
+
+/* Alfa Romeo */
+body.driversPage>section>ul>li:nth-of-type(17):hover,
+body.driversPage>section>ul>li:nth-of-type(18):hover,
+body.driversPage>section>ul>li:nth-of-type(20):hover {
+  border-color: #900000;
+
+  padding-top: 2em;
+  margin-top: .25em;
+}
+
+/* Haas */
+body.driversPage>section>ul>li:nth-of-type(19):hover,
+body.driversPage>section>ul>li:nth-of-type(21):hover {
+  border-color: lightgrey;
+
+  padding-top: 2em;
+  margin-top: .25em;
+}
+
+
+
+
+
+
+
 
 
 /* CODE VOOR WANNEER HET SCHERM GROTER DAN 56EM WORDT */
@@ -669,5 +862,54 @@ body.driversPage>section>ul>li:first-of-type:hover {
   section:nth-of-type(3)>ul:last-of-type li {
     grid-template-columns: 1fr 2fr 6fr 1fr;
     font-size: 1em;
+  }
+
+  body.driversPage>section>ul {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer>section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* CODE VOOR WANNEER HET SCHERM GROTER DAN 70EM WORDT */
+
+@media (min-width: 70em) {
+  body.driversPage>section>ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  footer>section {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* CODE VOOR WANNEER HET SCHERM GROTER DAN 92EM WORDT */
+
+@media (min-width: 92em) {
+  body.driversPage>section>ul {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  footer>section {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
