@@ -1,8 +1,15 @@
-var deButton = document.querySelector("nav button");
+var navButton = document.querySelector("nav button");
+var navBar = document.querySelector("nav");
+var scheduleList = document.querySelector("section:nth-of-type(2) ul");
+var russia = document.querySelector("section:nth-of-type(2) li:nth-of-type(8)");
 
-deButton.addEventListener("click", toggleMenu);
+navButton.addEventListener("click", toggleMenu);
+russia.addEventListener("click", focusRussia);
 
-function toggleMenu(event) {
-  deNav = event.target.parentNode;
-  deNav.classList.toggle("showMenu");
+function toggleMenu() {
+  navBar.classList.toggle("showMenu");
+}
+
+function focusRussia() {
+    scheduleList.classList.add("russia");
 }
