@@ -148,7 +148,7 @@ nav button {
 
 
 
-section:first-of-type {
+body>section:first-of-type {
   position: relative;
   max-width: 100%;
   margin-top: 6em;
@@ -301,12 +301,14 @@ section:nth-of-type(3) h1 {
   color: white;
 }
 
-section:nth-of-type(3) ul:first-of-type {
+div:first-of-type ul:first-of-type {
+  display: flex;
+  justify-content: center;
   margin: 0em;
   padding: 0em;
 }
 
-section:nth-of-type(3) ul:first-of-type li {
+div:first-of-type ul:first-of-type li {
   margin: 0em;
   padding: 1em;
   border: none;
@@ -316,22 +318,103 @@ section:nth-of-type(3) ul:first-of-type li {
   cursor: pointer;
 }
 
-section:nth-of-type(3) ul:first-of-type li:hover {
+div:first-of-type ul:first-of-type li:hover {
   border-color: var(--f1red);
 }
 
 section:nth-of-type(3)>ul:last-of-type li {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  background-color: white;
+
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr 1fr;
+  grid-gap: 2em;
   margin-left: 2em;
   margin-right: 2em;
-  background-color: white;
+  margin-bottom: .25em;
+  padding: .5em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+
+  border-radius: 1em;
+
+  transition: .3s;
 }
 
-div:first-of-type ul {
-  display: flex;
-  justify-content: center;
+/* section:nth-of-type(3)>ul:last-of-type li p:last-of-type {
+  background-color: lightgrey;
+  padding: .5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 1em;
+} */
+
+section:nth-of-type(3)>ul:last-of-type li:hover {
+  background-color: #15151e;
+  color: white;
+
+  cursor: pointer;
+}
+
+section:nth-of-type(3)>ul:last-of-type li p {
+  padding-top: .5em;
+}
+
+/* VERSCHILLENDE BORDER COLORS VOOR VERSCHILLENDE TEAMS */
+
+section:nth-of-type(3)>ul:last-of-type li:first-of-type h2,
+section:nth-of-type(3)>ul:last-of-type li:nth-of-type(3) h2 {
+  border-right: solid .35em #00d2be;
+}
+
+section:nth-of-type(3)>ul:last-of-type li:nth-of-type(2) h2,
+section:nth-of-type(3)>ul:last-of-type li:nth-of-type(5) h2 {
+  border-right: solid .35em #0600ef;
+}
+
+section:nth-of-type(3)>ul:last-of-type li:nth-of-type(4) h2,
+section:nth-of-type(3)>ul:last-of-type li:nth-of-type(8) h2 {
+  border-right: solid .35em #FF9800;
+}
+
+section:nth-of-type(3)>ul:last-of-type li:nth-of-type(6) h2,
+section:nth-of-type(3)>ul:last-of-type li:nth-of-type(7) h2 {
+  border-right: solid .35em #dc0000;
+}
+
+section:nth-of-type(3)>ul:last-of-type li:nth-of-type(9) h2,
+section:nth-of-type(3)>ul:last-of-type li:nth-of-type(14) h2 {
+  border-right: solid .35em #2b4562;
+}
+
+section:nth-of-type(3)>ul:last-of-type li:nth-of-type(10) h2,
+section:nth-of-type(3)>ul:last-of-type li:nth-of-type(11) h2 {
+  border-right: solid .35em #0090ff;
+}
+
+section:nth-of-type(3)>ul:last-of-type li:nth-of-type(12) h2,
+section:nth-of-type(3)>ul:last-of-type li:nth-of-type(13) h2 {
+  border-right: solid .35em #006f62;
+}
+
+section:nth-of-type(3)>ul:last-of-type li:nth-of-type(15) h2,
+section:nth-of-type(3)>ul:last-of-type li:nth-of-type(16) h2 {
+  border-right: solid .35em #005aff;
+}
+
+section:nth-of-type(3)>ul:last-of-type li:nth-of-type(17) h2,
+section:nth-of-type(3)>ul:last-of-type li:nth-of-type(18) h2,
+section:nth-of-type(3)>ul:last-of-type li:nth-of-type(20) h2 {
+  border-right: solid .35em #900000;
+}
+
+section:nth-of-type(3)>ul:last-of-type li:nth-of-type(19) h2,
+section:nth-of-type(3)>ul:last-of-type li:nth-of-type(21) h2 {
+  border-right: solid .35em lightgrey;
+}
+
+
+b {
+  text-transform: uppercase;
 }
 
 
@@ -343,15 +426,46 @@ div:first-of-type ul {
 /* CODE VOOR DE FOOTER */
 
 footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-
   color: white;
   background-color: #15151e;
+
+  padding: 2em;
+  padding-left: 5em;
+  padding-right: 5em;
+  margin-top: 3em;
 }
 
+footer>section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
+  margin: 1em;
+  padding: 1em;
+
+  border-right: solid .65em #38383f;
+  border-bottom: solid .65em #38383f;
+  border-bottom-right-radius: 1.5em;
+}
+
+footer li {
+  margin: .25em;
+  border-bottom: solid .25em transparent;
+
+  cursor: pointer;
+}
+
+footer li:hover {
+  border-bottom-color: var(--f1red);
+}
+
+/* CODE VOOR DE TWEEDE HTML PAGINA, OVER DE DRIVERS */
+
+.driversPage h1 {
+  font-size: 3em;
+}
+
+/* CODE VOOR WANNEER HET SCHERM GROTER DAN 56EM WORDT */
 
 @media (min-width: 56em) {
   nav {
@@ -392,7 +506,7 @@ footer {
     border-bottom-right-radius: 0em;
   }
 
-  section:first-of-type {
+  body>section:first-of-type {
     grid-template-columns: 2fr 1fr 1fr;
     margin: 4em;
   }
@@ -406,6 +520,12 @@ footer {
     font-size: 2em;
   }
 
+  section:nth-of-type(3)>ul:last-of-type {
+    margin-left: 10em;
+    margin-right: 10em;
+  }
 
-
+  section:nth-of-type(3)>ul:last-of-type li {
+    grid-template-columns: 1fr 2fr 6fr 1fr;
+  }
 }
