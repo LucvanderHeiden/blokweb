@@ -9,6 +9,8 @@
   --f1red: #e10600;
 }
 
+/* GEIMPORTEERDE FONTS OM TE GEBRUIKEN */
+
 @font-face {
   font-family: Formula1-Regular;
   src: url(https://www.formula1.com/etc/designs/fom-website/fonts/F1Regular/Formula1-Regular.ttf);
@@ -68,9 +70,9 @@ h2 {
 
 h3 {
   color: var(--f1red);
-  font-size: .75em;
-  margin: 2px;
-  margin-bottom: 6px;
+  font-size: .8em;
+  margin: .125em;
+  margin-bottom: .4em;
   margin-top: .75em;
 
 }
@@ -78,6 +80,14 @@ h3 {
 div {
   overflow: hidden;
 }
+
+
+
+
+
+
+
+/* CODE VOOR DE HEADER EN NAV */
 
 header a:first-of-type {
   order: 1;
@@ -131,10 +141,10 @@ nav>ul {
   align-items: center;
   padding: 2em;
   position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
+  top: 0em;
+  left: 0em;
+  right: 0em;
+  bottom: 0em;
   transform: translateX(calc(-100%));
 
   background-color: var(--f1red);
@@ -149,7 +159,7 @@ header li {
   border-color: white;
   border-bottom-right-radius: 1em;
 
-  padding: 1.25em;
+  padding: 1.15em;
   margin-bottom: 1.25em;
 
   transition: 0.25s;
@@ -172,23 +182,24 @@ nav button {
 
 
 
+
+
+
+
+/* CODE VOOR DE EERSTE SECTION, HET NIEUWSOVERZICHT */
+
 body>section:first-of-type {
   position: relative;
   max-width: 100%;
-  margin-top: 6em;
+  margin-top: 8em;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1.2em;
 }
 
-.usa {
-  transition: 1s;
-  transform: translateX(-23em);
-}
-
 article {
-  margin: 8px;
+  margin: .5em;
   overflow: hidden;
 }
 
@@ -202,7 +213,7 @@ article:first-of-type {
   grid-column: span 2;
 
   margin-bottom: 2em;
-  padding-right: 12px;
+  padding-right: .75em;
 }
 
 article img {
@@ -225,20 +236,14 @@ article:hover h1 {
 }
 
 article>p {
-  padding: 4px;
-  margin-top: 4px;
+  padding: .25em;
+  margin-top: .25em;
 
   border: solid;
   border-left: hidden;
   border-top: hidden;
-  border-bottom-right-radius: 10px;
-  border-width: 1px;
-}
-
-section button {
-  position: absolute;
-  left: 185px;
-  top: 75px;
+  border-bottom-right-radius: .65em;
+  border-width: .1em;
 }
 
 
@@ -250,6 +255,7 @@ section button {
 
 
 
+/* CODE VOOR DE TWEEDE SECTION, DE SCHEDULE */
 
 section:nth-of-type(2) {
   background-color: #15151e;
@@ -305,8 +311,16 @@ li img {
 }
 
 .russia {
-  transform: translateX(-36em);
+  transform: translateX(-40em);
 }
+
+
+
+
+
+
+
+/* CODE VOOR DE DERDE SECTION, DE STANDINGS */
 
 section:nth-of-type(3) img {
   width: 100%;
@@ -373,14 +387,6 @@ section:nth-of-type(3)>ul:last-of-type li {
 
   transition: .3s;
 }
-
-/* section:nth-of-type(3)>ul:last-of-type li p:last-of-type {
-  background-color: lightgrey;
-  padding: .5em;
-  padding-left: 1em;
-  padding-right: 1em;
-  border-radius: 1em;
-} */
 
 section:nth-of-type(3)>ul:last-of-type li:hover {
   background-color: #15151e;
@@ -485,9 +491,6 @@ footer {
 footer>section {
   display: grid;
   grid-template-columns: 1fr;
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-between; */
 
   margin: 1em;
   padding: 1em;
@@ -824,8 +827,6 @@ body.driversPage>section>ul>li:nth-of-type(21):hover {
     margin: 0em;
     padding-bottom: 0;
     padding-top: 1.5em;
-
-    transform: translateY(-.5em);
 
   }
 
